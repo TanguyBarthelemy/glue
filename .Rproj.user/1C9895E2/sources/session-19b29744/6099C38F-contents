@@ -1,0 +1,9 @@
+
+path1 <- "/home/onyxia/work/glue/"
+path2 <- "/home/onyxia/work/rjd3production/"
+
+compare <- function(path1, path2) {
+  all_files1 <- fs::dir_ls(path1)
+  all_files2 <- fs::dir_ls(path2)
+  print(waldo::compare())
+}

@@ -1,0 +1,24 @@
+{
+    "id": "3D3B1364",
+    "path": "~/work/glue/.github/workflows/R-CMD-check.yaml",
+    "project_path": ".github/workflows/R-CMD-check.yaml",
+    "type": "yaml",
+    "hash": "828367395",
+    "contents": "",
+    "dirty": false,
+    "created": 1790939038940.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1790939113,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1790939113308,
+    "read_only": false,
+    "read_only_alternatives": []
+}
