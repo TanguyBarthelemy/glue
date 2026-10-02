@@ -1,12 +1,12 @@
 {
-    "id": "3CA0E401",
-    "path": "~/work/glue/.github/workflows/R-CMD-check.yaml",
-    "project_path": ".github/workflows/R-CMD-check.yaml",
-    "type": "yaml",
-    "hash": "4274294769",
+    "id": "56B0CE1A",
+    "path": "~/work/glue/DESCRIPTION",
+    "project_path": "DESCRIPTION",
+    "type": "dcf",
+    "hash": "548548527",
     "contents": "",
     "dirty": false,
-    "created": 1790938460131.0,
+    "created": 1790938678094.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
@@ -14,11 +14,11 @@
         "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 1790938616,
+    "lastKnownWriteTime": 1790935156,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1790938616247,
+    "last_content_update": 1790935156,
     "read_only": false,
     "read_only_alternatives": []
 }
