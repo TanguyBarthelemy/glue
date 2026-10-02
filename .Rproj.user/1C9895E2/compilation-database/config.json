@@ -1,0 +1,26 @@
+{
+    "args": [
+        "-std=gnu2x",
+        "-I/usr/local/lib/R/include",
+        "-DNDEBUG",
+        "-I/usr/local/include",
+        "-fvisibility=hidden",
+        "-fpic",
+        "-fstack-protector-strong",
+        "-D_FORTIFY_SOURCE=2",
+        "-DEIGEN_DONT_VECTORIZE",
+        "-I/usr/include/c++/13",
+        "-I/usr/include/x86_64-linux-gnu/c++/13",
+        "-I/usr/include/c++/13/backward",
+        "-I/usr/lib/gcc/x86_64-linux-gnu/13/include",
+        "-I/usr/local/include",
+        "-I/usr/include/x86_64-linux-gnu",
+        "-I/usr/include"
+    ],
+    "pch": "",
+    "is_cpp": false,
+    "hash": "17909351561790935180",
+    "compiler": "6372117035445377015",
+    "rversion": "4.6.1",
+    "dbversion": 4
+}
