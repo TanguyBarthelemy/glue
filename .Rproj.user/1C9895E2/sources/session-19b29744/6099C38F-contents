@@ -2,13 +2,13 @@
 path_glue <- "/home/onyxia/work/glue/"
 path_rjd3production <- "/home/onyxia/work/rjd3production/"
 
-exclude <- c(".git", "Rproj.user", ".", "..")
+exclude <- c(".git", ".Rproj.user", ".", "..")
 
 compare_tb <- function(path1, path2) {
   if (fs::is_dir(path1)) {
     # print("1ère solution")
-    all_files2 <- setdiff(list.files(path2, full.names = FALSE, all.files = TRUE, include.dirs = TRUE), exclude)
-    all_files1 <- setdiff(list.files(path1, full.names = FALSE, all.files = TRUE, include.dirs = TRUE), exclude)
+    all_files2 <- setdiff(list.files(path2, full.names = FALSE, all.files = TRUE, include.dirs = TRUE), exclude) |> sort()
+    all_files1 <- setdiff(list.files(path1, full.names = FALSE, all.files = TRUE, include.dirs = TRUE), exclude) |> sort()
     res <- waldo::compare(all_files1, all_files2)
     if (length(res) > 0) {
       print(res)
