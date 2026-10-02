@@ -1,9 +1,32 @@
 
-path1 <- "/home/onyxia/work/glue/"
-path2 <- "/home/onyxia/work/rjd3production/"
+path_glue <- "/home/onyxia/work/glue/"
+path_rjd3production <- "/home/onyxia/work/rjd3production/"
 
-compare <- function(path1, path2) {
-  all_files1 <- fs::dir_ls(path1)
-  all_files2 <- fs::dir_ls(path2)
-  print(waldo::compare())
+exclude <- c(".git", "Rproj.user", ".", "..")
+
+compare_tb <- function(path1, path2) {
+  if (fs::is_dir(path1)) {
+    # print("1ère solution")
+    all_files2 <- setdiff(list.files(path2, full.names = FALSE, all.files = TRUE, include.dirs = TRUE), exclude)
+    all_files1 <- setdiff(list.files(path1, full.names = FALSE, all.files = TRUE, include.dirs = TRUE), exclude)
+    res <- waldo::compare(all_files1, all_files2)
+    if (length(res) > 0) {
+      print(res)
+    }
+    for (dirc in intersect(all_files1, all_files2)) {
+      compare_tb(file.path(path1, dirc), file.path(path2, dirc))
+    }
+  } else {
+    # print("2ème solution")
+    f1 <- readLines(path1)
+    f2 <- readLines(path2)
+    res <- waldo::compare(f1, f2)
+    if (length(res) > 0) {
+      print(res)
+    }
+  }
+  return(NULL)
 }
+
+compare_tb(path1 = path_glue, path2 = path_rjd3production)
+
